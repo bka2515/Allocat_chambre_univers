@@ -21,11 +21,17 @@ class Chambre
      * @ORM\Column(type="string", length=255)
      */
     private $Nchmbr;
+    
 
     /**
      * @ORM\Column(type="string", length=255)
      */
     private $type;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $Nbtmnt;
 
     public function getId(): ?int
     {
@@ -43,6 +49,7 @@ class Chambre
 
         return $this;
     }
+   
 
     public function getType(): ?string
     {
@@ -52,6 +59,18 @@ class Chambre
     public function setType(string $type): self
     {
         $this->type = $type;
+
+        return $this;
+    }
+
+    public function getNbtmnt(): ?string
+    {
+        return $this->Nbtmnt;
+    }
+
+    public function setNbtmnt(string $Nbtmnt): self
+    {
+        $this->Nbtmnt = $Nbtmnt;
 
         return $this;
     }
